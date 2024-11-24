@@ -2,18 +2,18 @@ using System.Runtime.CompilerServices;
 
 public class Word
 {
-    private string _text {get;}
-    private bool _isHidden{get; set;}
+    private string _text;
+    private bool _isHidden;
 
     public Word(string text)
     {
         _text = text;
-        _isHidden = false;
     }
 
     public void Hide()
     {
-        _isHidden = true;
+        var replacement = _text.Replace($"{_text.Length}", "_");
+        replacement = _text;
     }
 
     public void Show()
@@ -21,11 +21,16 @@ public class Word
         _isHidden = false;
     }
 
+    public bool IsHidden()
+    {
+        if (Word.Hide())
+        {
+            
+        }
+    }
+
     public string GetDisplayText()
     {
-        if
-        {
-            Hide
-        }
+
     }
 }
