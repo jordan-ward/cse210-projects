@@ -69,8 +69,7 @@ public class GoalManager
                 {
                     SimpleGoal newSimpleGoal = new SimpleGoal();
                     newSimpleGoal.CreateChildGoal();
-                    goals.Add(newSimpleGoal);
-                    break;
+                    goals.Add(newSimpleGoal);                    
                 }
 
                 if(goalType == "2")
@@ -78,7 +77,6 @@ public class GoalManager
                     EternalGoal newEternalGoal = new EternalGoal();
                     newEternalGoal.CreateChildGoal();
                     goals.Add(newEternalGoal);
-                    break;
                 }
 
                 if(goalType == "3")
@@ -86,13 +84,12 @@ public class GoalManager
                     ChecklistGoal newChecklistGoal = new ChecklistGoal();
                     newChecklistGoal.CreateChildGoal();
                     goals.Add(newChecklistGoal);
-                    break;
+
                 }
 
                 else
                 {
                     Console.WriteLine("That was not a valid choice. Please try again.");
-                    break;
                 }
                 
 
@@ -107,8 +104,6 @@ public class GoalManager
                     Console.Write("\n");
                 }
                 Console.WriteLine();
-
-                break;
             }
 
             if(userSelection == "3")
@@ -127,7 +122,6 @@ public class GoalManager
                         outputFile.WriteLine(goal.GetStringRepresentation());
                     }
                 }
-                break;
             }
 
             if(userSelection == "4")
@@ -159,7 +153,6 @@ public class GoalManager
                         goals.Add(ChecklistGoal);
                     }
                 }
-                break;
             }
 
             if(userSelection == "5")
@@ -182,8 +175,6 @@ public class GoalManager
                 {
                     Console.WriteLine("You have already completed this goal.");
                 }
-
-                break;
             }
 
             else
